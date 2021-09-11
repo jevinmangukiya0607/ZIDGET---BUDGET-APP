@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    -webkit-user-select: none;      
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body{
+    background: #ebf5fc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.budget-container{
+    width: 325px;
+    margin-top: 35px;
+    height: 90vh;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #ebf5fc;
+    border-radius: 20px;
+    font-family: 'Padauk', sans-serif;
+    font-size: 1.1em;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.5),
+    -5px 5px 20px rgba(0,0,0,0.5),
+    5px -5px 20px rgba(0,0,0,0.5),
+    -5px -5px 20px rgba(0,0,0,0.5);
+}
+
+.app-title{
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.app-title a{
+    font-size: 2em;
+    color: #2EB5E2;
+    text-decoration: none;
+}
+
+.budget-header{
+    margin-top: 10px;
+    margin:5px 20px;
+}
+
+.budget-header img{
+    width:20px;
+    height: 20px;
+}
+
+.budget-header .value{
+    font-size: 1.5em;
+}
+
+.budget-header .account{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: 700;
+} 
+
+.budget-header .account .income, .chart, .outcome{
+    height: 50px;
+    display: inline-block;
+    width: 100px;
+    vertical-align: middle;
+}
+
+.budget-header .account .outcome-total{
+    color: #f0624d;
+}
+
+.budget-header .account .income .title,
+.budget-header .account .outcome .title{
+    opacity: 0.6;
+}
+
+
+.budget-dashboard{
+    background: #fff;
+    height: 100%;
+    color: black;
+    border-radius: 20px 20px 0px 0px ;
+    box-shadow:inset 0px -10px 20px rgba(0,0,0,0.5);
+}
+
+.budget-dashboard .dash-title{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color:#2EB5E2;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-top:5px;
+    padding-left: 20px;
+}
+
+.budget-dashboard .toggle{
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+}
+
+.budget-dashboard .toggle div{
+    opacity: 0.5;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.budget-dashboard .toggle .active{
+    opacity: 1;
+    font-weight: 700;
+}
+
+.hide{
+    display: none;
+}
+
+.budget-dashboard .list{
+    height: 265px;
+    margin-top: 7px;
+    padding-left: 20px;
+    list-style: none;
+    overflow: scroll;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.budget-dashboard #expense ul{
+    color: #f0624d;
+}
+
+.budget-dashboard ul{
+    width: 360px;
+    height: 285px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top:20px;
+    overflow-x: auto;
+}
+
+.budget-dashboard ul.list li{
+    position: relative;
+    font-size: 1em;
+}
+
+.budget-dashboard ul.list li *{
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.budget-dashboard ul.list li .entry{
+    width:250px;
+    height: auto;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+.budget-dashboard ul.list li #edit{
+    position: absolute;
+    width:20px;
+    height: 20px;
+    right: 90px;
+    cursor: pointer;
+    background-image: url("icon/edit.png");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+.budget-dashboard ul.list li #delete{
+    position: absolute;
+    width:20px;
+    height: 20px;
+    right:50px;
+    cursor: pointer;
+    background-image: url('icon/trash.png');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+.budget-dashboard .input{
+    display: flex;
+    overflow: hidden;
+    height: 60px;
+    padding: 10px 10px;
+    border-top: 2px solid ;
+    padding-bottom:20px;
+}
+
+.budget-dashboard .input input{
+    width: 115px;
+    outline: none;
+    margin-right: 15px;
+    border:none;
+    border-bottom: 2px solid rgba(0,0,0,0.5);
+    font-size: 1em;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.budget-dashboard .input div .plus{
+    width: 40px;
+    height: 40px;
+    transform: translateY(-27%);
+}
+
+.budget-dashboard #all ul.list li #edit{
+    visibility: hidden;
+}
+
+.budget-dashboard #all ul.list li.expense{
+    color: #f0624d;
+}
+
+.budget-dashboard #all .list{
+    height: 326px;
+    padding-bottom: 20px;
+}
